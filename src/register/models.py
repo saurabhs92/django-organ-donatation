@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 class Organ(models.Model):
     name = models.CharField(max_length=50)
@@ -19,3 +20,6 @@ class Donor(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('register:detail', kwargs={"id": self.id})
