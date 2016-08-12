@@ -9,6 +9,9 @@ def register_donor(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+        context_1 = {
+            'title': 'Donor Details',
+        }
         return HttpResponseRedirect(instance.get_absolute_url())
     context = {
         'title': 'Register',
@@ -23,3 +26,10 @@ def donor_detail(request, id):
         'donor': donor,
     }
     return render(request, 'register/donor_detail.html', context)
+
+def register_success(request):
+    context = {
+        'title': 'Donor Details',
+    }
+    return render(request, 'register/register_sucess.html', context)
+
