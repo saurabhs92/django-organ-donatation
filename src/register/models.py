@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+import uuid
 
 class Organ(models.Model):
     name = models.CharField(max_length=50)
@@ -12,7 +13,7 @@ class Donor(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
     phone = models.IntegerField()
-    #unique_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     registered = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     dob = models.DateField(auto_now_add=False, auto_now=False)
