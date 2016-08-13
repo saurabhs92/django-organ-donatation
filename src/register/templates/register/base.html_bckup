@@ -12,19 +12,8 @@
 
 <body>
   <div class="container">
-
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    {% include 'navbar.html' %}
-
     {% block content %}
     {% endblock content %}
-</div>
-  <div class="col-md-2"></div>
-</div>
-
-
   </div>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

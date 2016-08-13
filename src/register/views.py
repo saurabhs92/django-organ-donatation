@@ -44,7 +44,7 @@ def download_donor_card(request, id):
 
     # Draw things on the PDF. Here's where the PDF generation happens.
     # See the ReportLab documentation for the full list of functionality.
-    p.drawString(100, 100, "Hello")
+    p.drawString(100, 100, id)
 
     # Close the PDF object cleanly, and we're done.
     p.showPage()
