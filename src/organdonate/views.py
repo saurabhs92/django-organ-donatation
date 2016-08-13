@@ -11,3 +11,9 @@ def about(request):
         'title': 'About Us',
     }
     return render(request, 'about.html', context)
+
+def contact(request):
+    context = {
+        'title': 'Contact Us',
+    }
+    return render(request, 'contact.html', context)
