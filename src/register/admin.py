@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Donor, Organ
 
 class DonorModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'phone', 'registered']
+    list_display = ['first_name', 'email', 'contact_no', 'registered']
     list_filter = ['registered', 'organ']
     class Meta:
         model = Donor
